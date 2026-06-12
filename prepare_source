@@ -1,7 +1,7 @@
-version_orig=2.12.1
-version="$version_orig-1"
+# 2.13.0 is not yet maintained on Debian Salsa, hence we need to download the code ourselves.
+git_src -b "debian/2.12.1-1" "https://salsa.debian.org/python-team/packages/pyjwt.git"
+
+git_src -b "2.13.0" "https://github.com/jpadilla/pyjwt"
+
+version="2.13.0-1"
 version_suffix="gl0~bp2150"
-
-git_src -b "debian/$version" "https://salsa.debian.org/python-team/packages/pyjwt.git"
-
-
