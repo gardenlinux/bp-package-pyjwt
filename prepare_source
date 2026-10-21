@@ -1,4 +1,8 @@
-git_src -b "debian/2.15.1-1" "https://salsa.debian.org/python-team/packages/pyjwt.git"
+# 2.15.1 uses debhelper-compat 14, not available in bp2150 snapshot.
+# Use debian/2.12.1-1 packaging (compat 13) with upstream 2.15.1 source.
+git_src -b "debian/2.12.1-1" "https://salsa.debian.org/python-team/packages/pyjwt.git"
+
+git_src -b "2.15.1" "https://github.com/jpadilla/pyjwt"
 
 version="2.15.1-1"
 version_suffix="gl0~bp2150"
